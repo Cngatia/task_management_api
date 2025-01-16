@@ -3,6 +3,7 @@ from django.urls import path
 from .views import UserViewSet, TaskViewSet,CategoryViewSet,UserProfileView
 from rest_framework_simplejwt.views import TokenObtainPairView
 router = DefaultRouter()
+from .views import custom_login
 
 # router.register(r'tasks', views.TaskViewSet, basename='task')
 router.register(r'auth/register', UserViewSet, basename='users')
@@ -12,5 +13,6 @@ router.register(r'users/me', UserProfileView, basename='me')
 
 urlpatterns = [ 
   path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), 
+  path('login/', custom_login, name='custom_login'),
    ] 
 urlpatterns += router.urls
