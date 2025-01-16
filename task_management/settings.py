@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'pythonanywhere.com',
+    '127.0.0.1',
 ]
 
 
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'tasks',
-    'django_filters'
+    'django_filters',
+    'api',
 ]
 
 REST_FRAMEWORK = {
