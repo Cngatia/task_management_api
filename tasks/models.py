@@ -58,5 +58,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment_text[:50]
-    
-    
+
+class Category(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    user= models.ForeignKey(User, on_delete=models.CASCADE)   

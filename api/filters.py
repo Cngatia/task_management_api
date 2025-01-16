@@ -1,6 +1,6 @@
 import django_filters
 from django_filters.rest_framework import DjangoFilterBackend
-from Task.models import Task
+from tasks.models import Task
 from rest_framework import filters
 
 class TaskFilter(django_filters.FilterSet):
